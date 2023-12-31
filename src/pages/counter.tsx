@@ -14,7 +14,7 @@ export default function Counter() {
     [setLocation, numberCount]
   )
   return (
-    <div>
+    <div className='wrapper'>
       <input readOnly value={numberCount} />
       <button onClick={() => add(-1)}>Decrement</button>
       <button onClick={() => add(1)}>Increment</button>
