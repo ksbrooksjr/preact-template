@@ -8,8 +8,7 @@ To use this template, simply clone the repo, run `npm ci --ignore-scripts`, and 
 npx esbuild src/pages/counter.tsx \
 --bundle \
 --minify \
---analyze \
---define:IS_DEV=false
+--analyze
 ```
 
 # Listing the dependencies
