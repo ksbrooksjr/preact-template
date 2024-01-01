@@ -1,3 +1,5 @@
+import { extractCss } from 'goober'
+
 export const html = ({
   title,
   description,
@@ -19,13 +21,7 @@ export const html = ({
       name="description"
       content="${description}" />
     <meta name="author" content="Keith Brooks" />
-    <style type="text/css">
-      .wrapper {
-        display: flex;
-        justify-content: space-between;
-        width: 10rem;
-      }
-    </style>
+    <style id="_goober">${extractCss()}</style>
     <script id="${scriptId}" type="application/json">${escapeJson(
     JSON.stringify(initialState ?? {})
   )}</script>
