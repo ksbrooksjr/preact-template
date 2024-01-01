@@ -9,11 +9,11 @@
   "scripts": {
     "start": "npm run build && node dist/server.js",
     "dev": "npm run client:watch & npm run server:watch",
-    "client:watch": "esbuild src/pages/counter.tsx --bundle --watch=forever --outdir=public --sourcemap --define:IS_DEV=true",
+    "client:watch": "esbuild src/pages/counter.tsx --bundle --watch=forever --outdir=public --sourcemap",
     "server:watch": "tsx watch src/server.tsx",
     "clean": "rm -rf {dist,public}/*",
     "build": "npm run clean && npm run build:client & npm run build:server & wait",
-    "build:client": "esbuild src/pages/counter.tsx --bundle --minify --outfile=public/counter.js --define:IS_DEV=false",
+    "build:client": "esbuild src/pages/counter.tsx --bundle --minify --outfile=public/counter.js",
     "build:server": "tsc"
   },
   "devDependencies": {
