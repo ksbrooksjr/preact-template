@@ -4,6 +4,7 @@ import { serveStatic } from '@hono/node-server/serve-static'
 import { html } from './utils/renderUtils.js'
 import render from 'preact-render-to-string'
 import Counter from './pages/counter.js'
+import React from 'react'
 import { Router } from 'wouter-preact'
 
 const app = new Hono()

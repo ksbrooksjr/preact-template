@@ -1,10 +1,9 @@
-import { useCallback, useMemo } from 'preact/hooks'
+import React, { useCallback, useMemo, createElement } from 'react'
 import clientHydrate from '../utils/hydrate.js'
 import { useLocation, useRoute } from 'wouter-preact'
-import { h } from 'preact'
-import { setup, css, styled } from 'goober'
+import { setup, styled, css } from 'goober'
 
-setup(h)
+setup(createElement)
 
 export default function Counter() {
   const [, params] = useRoute('/counter/:currentCount')

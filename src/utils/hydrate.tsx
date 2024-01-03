@@ -1,4 +1,6 @@
-import { hydrate, ComponentType } from 'preact'
+import React from 'react'
+import { hydrate } from 'react-dom'
+import { ComponentType } from 'preact'
 
 export default function clientHydrate<T>(
   Component: ComponentType<T>,

@@ -1,6 +1,7 @@
 {
   "include": ["./src/**/*.ts", "./src/**/*.tsx"],
   "compilerOptions": {
+    "jsx": "react",
     "target": "ESNext",
     "module": "ESNext",
     "moduleResolution": "bundler",
@@ -9,7 +10,9 @@
     "strict": true,
     "skipLibCheck": true,
     "declaration": true,
-    "jsx": "react-jsx",
-    "jsxImportSource": "preact"
+    "paths": {
+      "react": ["./node_modules/preact/compat/"],
+      "react-dom": ["./node_modules/preact/compat/"]
+    }
   }
 }
