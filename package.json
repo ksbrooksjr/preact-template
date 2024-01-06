@@ -8,6 +8,7 @@
   "license": "CC-BY-SA-4.0",
   "scripts": {
     "start": "npm run build && node dist/server.js",
+    "client:dev": "esbuild src/pages/counter.tsx --bundle --watch --outdir=static --servedir=static --serve=127.0.0.1:8000 --serve-fallback=static/index.html --define:window.LIVE_RELOAD=true",
     "dev": "npm run client:watch & npm run server:watch",
     "client:watch": "esbuild src/pages/counter.tsx --bundle --watch=forever --outdir=public --sourcemap",
     "server:watch": "tsx watch src/server.tsx",
